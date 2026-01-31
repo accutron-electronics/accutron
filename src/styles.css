@@ -1,0 +1,36 @@
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #333333;
+  --accent: #000000;
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:980px;margin:0 auto;padding:28px}
+.site-header{border-bottom:1px solid #e7e7e7}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{height:40px;width:auto}
+.brand-text{font-weight:600;color:var(--muted)}
+.nav a{margin-left:18px;color:var(--muted);text-decoration:none}
+.nav a.active{color:var(--accent);font-weight:600}
+main.container{padding-top:30px;padding-bottom:60px}
+h1{font-size:24px;margin:0 0 12px}
+h2{font-size:18px;margin-top:20px}
+.lead{font-size:15px;color:var(--muted);margin-bottom:10px}
+ul{margin-left:18px}
+.site-footer{border-top:1px solid #e7e7e7;padding:18px 0;background:transparent}
+.footer-inner{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
+
+@media (max-width:720px){
+  .header-inner{flex-direction:column;align-items:flex-start;gap:12px}
+  .nav a{margin-left:0;margin-right:12px}
+  .footer-inner{flex-direction:column;gap:6px}
+}
